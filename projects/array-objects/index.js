@@ -26,12 +26,12 @@ function forEach(array, fn) {
    console.log(newArray); // выведет [1, 4, 9]
  */
 function map(array, fn) {
-  var copy_array = [];
+  var copyArray = [];
   for (let i=0; i< array.length; i++) {
-    copy_array[i] =fn(array[i], i, array);
+    copyArray[i] =fn(array[i], i, array);
   }
 
-  return copy_array;
+  return copyArray;
 }
 
 /*
@@ -45,10 +45,15 @@ function map(array, fn) {
    console.log(sum); // выведет 6
  */
 function reduce(array, fn, initial) {
-  var x =initial || array[0],
-    i = initial ? 0:1;
+  let startIndex =0;
+  let x = initial;
 
-    for( ; i<array.length; i++) {
+  if(initial === undefined) {
+    startIndex = 1;
+    x = array[0];
+  }
+
+    for(let i = startIndex; i<array.length; i++) {
       x = fn(x, array[i], i, array)
     }
     return x;
