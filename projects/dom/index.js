@@ -152,6 +152,7 @@ function collectDOMStat(root) {
       scan(child);
   }
 }
+}
 
 
 
