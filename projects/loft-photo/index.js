@@ -1,5 +1,14 @@
-import photosDB from './photos.json';
-import friendsDB from './friends.json';
+import pages from './pages';
+import('./styles.css');
+
+const pageNames = ['login', 'main', 'profile'];
+
+document.addEventListener('click', () => {
+  const pageName = model.getRandomElement(pagesNames);
+  pages.openPage(pageName);
+});
+
+
 
 export default {
   getRandomElement(array) {

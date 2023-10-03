@@ -7,3 +7,4 @@ export default {
   getRandomElement(array) {},
   getNextPhoto() {},
 };
+
