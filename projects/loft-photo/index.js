@@ -4,11 +4,15 @@ import('./styles.css');
 const pageNames = ['login', 'main', 'profile'];
 
 document.addEventListener('click', () => {
-  const pageName = model.getRandomElement(pagesNames);
-  pages.openPage(pageName);
+  document.addEventListener('click', () => {
+    const pageName = model.getRandomElement(pagesNames);
+    pages.openPage(pageName);
+  });
+  
 });
 
-
+import photosDB from './photos.json';
+import friendsDB from './friends.json';
 
 export default {
   getRandomElement(array) {
